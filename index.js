@@ -1,7 +1,7 @@
 const { WebSocketServer } = require('ws');
 const ChromecastAPI = require('chromecast-api')
 
-const wss = new WebSocketServer({ port: 8080 || process.env.PORT});
+const wss = new WebSocketServer({ process.env.PORT || port: 8080});
 
 wss.on('connection', ws => {
     console.log('connected')
